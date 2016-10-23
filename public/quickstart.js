@@ -15,7 +15,7 @@ window.addEventListener('beforeunload', leaveRoomIfJoined);
 
 $.getJSON('/token', function (data) {
   identity = data.identity;
-
+  console.log(identity);
   // Create a Video Client and connect to Twilio
   videoClient = new Twilio.Video.Client(data.token);
   document.getElementById('room-controls').style.display = 'block';
